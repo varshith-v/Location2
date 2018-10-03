@@ -1,6 +1,7 @@
 package com.example.varsh.location2;
 
 import android.Manifest;
+import android.app.Application;
 import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -95,7 +96,7 @@ public class LocationTrack extends Service implements LocationListener {
                 }
 
 
-                /*if (checkNetwork) {
+                if (checkNetwork) {
 
 
                     if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -122,7 +123,7 @@ public class LocationTrack extends Service implements LocationListener {
                         latitude = loc.getLatitude();
                         longitude = loc.getLongitude();
                     }
-                }*/
+                }
 
             }
 
@@ -203,6 +204,7 @@ public class LocationTrack extends Service implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
+
 
     }
 

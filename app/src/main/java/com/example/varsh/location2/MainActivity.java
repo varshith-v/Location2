@@ -1,6 +1,7 @@
 package com.example.varsh.location2;
 
 import android.annotation.TargetApi;
+import android.app.Application;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 locationTrack = new LocationTrack(MainActivity.this);
-
 
                 if (locationTrack.canGetLocation()) {
 
