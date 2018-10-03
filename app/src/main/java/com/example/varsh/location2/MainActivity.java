@@ -64,8 +64,13 @@ public class MainActivity extends AppCompatActivity {
                     double longitude = locationTrack.getLongitude();
                     double latitude = locationTrack.getLatitude();
 
-                    Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
-                } else {
+                    if(latitude == 0 || longitude == 0)
+                        Toast.makeText(getApplicationContext(), "Fetching Location. Try after a few seconds", Toast.LENGTH_SHORT).show();
+                    else
+                    Toast.makeText(getApplicationContext(), "Latitude:" + Double.toString(latitude) + "\nLongitude:" + Double.toString(longitude) ,  Toast.LENGTH_SHORT).show();
+                }
+
+                else {
 
                     locationTrack.showSettingsAlert();
                 }
